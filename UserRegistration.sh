@@ -72,7 +72,27 @@ function checkMobileNumber()
 
 }
 
+function CheckPassword()
+{
+	echo "Enter password to check valid or not "
+
+        read password
+
+        pattern="([a-zA-Z0-9]+){8}"
+
+        if [[ $password =~ $pattern ]];
+        then
+                echo "Valid"
+        else
+                echo "Invalid"
+        fi
+
+
+
+}
+
 checkFirstName
 checkLastName
 checkEmail
 checkMobileNumber
+CheckPassword
