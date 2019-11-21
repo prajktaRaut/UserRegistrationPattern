@@ -78,7 +78,7 @@ function CheckPassword()
 
         read password
 
-	pattern="[a-z]*[A-Z]+[0-9]+[a-z]*{8}"
+	pattern="[a-z]*[A-Z]+[0-9]+[@$!%#_]*[a-z]*{8}"
 
 	if [[ $password =~ $pattern ]];
         then
