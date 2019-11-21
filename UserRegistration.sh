@@ -38,7 +38,7 @@ function checkLastName()
 function checkEmail()
 {
 
-	echo "Enter email tocheck valid or not "
+	echo "Enter email to check valid or not "
 
 	read email
 
@@ -53,6 +53,26 @@ function checkEmail()
 
 }
 
+function checkMobileNumber()
+{
+
+   	echo "Enter mobile number to check valid or not "
+
+        read mobileNumber
+
+        pattern="^(91)[: :]?[7-9]{1}[0-9]{9}"
+
+        if [[ $mobileNumber =~ $pattern ]];
+        then
+                echo "Valid"
+        else
+                echo "Invalid"
+        fi
+
+
+}
+
 checkFirstName
 checkLastName
 checkEmail
+checkMobileNumber
