@@ -78,9 +78,9 @@ function CheckPassword()
 
         read password
 
-        pattern="([a-zA-Z0-9]+){8}"
+	pattern=([A-Z]+)
 
-        if [[ $password =~ $pattern ]];
+        if [[ ${#password} -ge 8 ]] && [[ $password =~ $pattern ]];
         then
                 echo "Valid"
         else
@@ -91,8 +91,8 @@ function CheckPassword()
 
 }
 
-checkFirstName
-checkLastName
-checkEmail
-checkMobileNumber
+#checkFirstName
+#checkLastName
+#checkEmail
+#checkMobileNumber
 CheckPassword
